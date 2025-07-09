@@ -10,16 +10,22 @@
       <div class="header__container">
         <h1 class="header__title">Odin Weather</h1>
         <nav class="header__nav">
-          <form class="search-form" action="#">
-            <label for="header__searchbar">Search location</label>
-            <input
-              type="text"
-              id="header__searchbar"
-              placeholder="Enter Location"
-              required
-            />
-            <button type="submit" class="searchbar-submit-btn">Submit</button>
-          </form>
+          <li>
+            <form class="search-form" action="#">
+              <label for="header__searchbar">Search location</label>
+              <input
+                type="text"
+                id="header__searchbar"
+                placeholder="Enter Location"
+                required
+              />
+              <button type="submit" class="searchbar-submit-btn">Submit</button>
+            </form>
+          </li>
+          <li>
+            <button class="fahrenheit-btn btn--active">F</button>
+            <button class="celsius-btn">C</button>
+          </li>
         </nav>
       </div>
     </header>
