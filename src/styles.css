@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/static/Roboto-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/static/Roboto-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+:root {
+  --odin-dark: rgb(16, 24, 40);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--odin-dark);
+}
