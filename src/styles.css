@@ -32,7 +32,7 @@ body {
 /*Header*/
 
 .header {
-  background-color: rgb(241, 241, 241);
+  background-color: #2d4d88;
   padding: 3em 0;
   display: flex;
   white-space: nowrap;
@@ -51,6 +51,7 @@ body {
 
 .header__title {
   font-size: 2.25rem;
+  color: white;
 }
 
 .search-form {
