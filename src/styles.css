@@ -26,13 +26,14 @@
 
 body {
   background-color: var(--odin-dark);
+  height: 100vh;
 }
 
 /*Header*/
 
 .header {
-  background-color: white;
-  padding: 1em 2em;
+  background-color: rgb(241, 241, 241);
+  padding: 3em 0;
   display: flex;
   white-space: nowrap;
   justify-content: center;
@@ -66,12 +67,16 @@ body {
 
 #header__searchbar {
   border: none;
-  padding: 5px 15px;
+  padding: 8px 20px;
   font-size: 1rem;
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(233, 231, 231);
   min-width: 250px;
   width: 100%;
   outline: none;
+}
+
+#header__searchbar::placeholder {
+  color: black;
 }
 
 .searchbar-submit-btn {
@@ -86,3 +91,60 @@ body {
 }
 
 /*Main*/
+
+main {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.wt-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+.wt-container {
+  width: 50%;
+  height: 500px;
+  background-color: rgb(245, 245, 245);
+  color: rgb(255, 255, 255);
+}
+
+.wt__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #2d4d88;
+  height: 90px;
+}
+
+.location__heading {
+  font-size: 1.75rem;
+}
+
+.location-name,
+.location-time {
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+.wt__body {
+  display: flex;
+  justify-content: space-between;
+  height: 396px;
+  padding: 0.5em;
+}
+
+.wt__body__content {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  background-color: #2d4d88;
+}
