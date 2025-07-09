@@ -1,3 +1,5 @@
+/*General*/
+
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/Roboto/static/Roboto-Medium.ttf') format('truetype');
@@ -25,3 +27,62 @@
 body {
   background-color: var(--odin-dark);
 }
+
+/*Header*/
+
+.header {
+  background-color: white;
+  padding: 1em 2em;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+.header__nav {
+  width: 100%;
+}
+
+.header__title {
+  font-size: 2.25rem;
+}
+
+.search-form {
+  display: flex;
+  min-width: 500px;
+  max-width: 600px;
+}
+
+.search-form label {
+  color: white;
+  width: 0px;
+  overflow: hidden;
+}
+
+#header__searchbar {
+  border: none;
+  padding: 5px 15px;
+  font-size: 1rem;
+  background-color: rgb(241, 241, 241);
+  min-width: 250px;
+  width: 100%;
+  outline: none;
+}
+
+.searchbar-submit-btn {
+  border: none;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  background-color: black;
+  cursor: pointer;
+}
+
+/*Main*/
