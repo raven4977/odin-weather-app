@@ -178,3 +178,12 @@ main {
   width: 30%;
   background-color: #2d4d88;
 }
+
+.content__img-container {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
