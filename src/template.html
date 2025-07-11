@@ -17,8 +17,10 @@
                 type="text"
                 id="header__searchbar"
                 placeholder="Enter Location"
+                autocomplete="off"
                 required
               />
+              <p class="error-msg"></p>
               <button type="submit" class="searchbar-submit-btn">Submit</button>
             </form>
           </li>
@@ -35,7 +37,6 @@
         <div class="wt__header">
           <div class="location-name-container">
             <h2 class="location__heading">Location Name:</h2>
-            <h2 class="location-name">Tokyo Japan</h2>
           </div>
           <div class="location-time__heading">
             <h2 class="location__heading">Location time:</h2>
@@ -51,9 +52,7 @@
             </div>
           </div>
           <div class="wt__body__content">
-            <div class="content__img-container">
-              <img src="#" alt="#" />
-            </div>
+            <div class="content__img-container"></div>
             <div class="current-temperature-container">
               <p>Current Temperature:</p>
             </div>
