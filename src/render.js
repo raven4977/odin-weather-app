@@ -10,21 +10,21 @@ import fog from './images/fog.png';
 export default async function render(location) {
   const weatherData = await getWeather(location);
   const locationNameContainer = document.querySelector(
-    '.location-name-container',
+    '.location-name-container'
   );
   const locationName = document.createElement('h2');
   locationName.innerText = weatherData.location;
   locationNameContainer.appendChild(locationName);
 
   const locationTimeContainer = document.querySelector(
-    '.location-time__heading',
+    '.location-time__heading'
   );
   const locationTime = document.createElement('h2');
-  locationTime.innerText = weatherData.currentConditions.dateTime;
+  locationTime.innerText = weatherData.currentConditions.datetime;
   locationTimeContainer.appendChild(locationTime);
 
   const sunriseTimeContainer = document.querySelector(
-    '.sunrise-time-container',
+    '.sunrise-time-container'
   );
   const sunriseTime = document.createElement('p');
   sunriseTime.innerText = weatherData.weather.sunrise;
@@ -36,28 +36,28 @@ export default async function render(location) {
   sunsetTimeContainer.appendChild(sunsetTime);
 
   const currentTemperatureContainer = document.querySelector(
-    '.current-temperature-container',
+    '.current-temperature-container'
   );
   const currentTemp = document.createElement('p');
   currentTemp.innerText = weatherData.weather.temp;
   currentTemperatureContainer.appendChild(currentTemp);
 
   const feelsLikeContainer = document.querySelector(
-    '.feels-like-temperature-container',
+    '.feels-like-temperature-container'
   );
   const feelsLike = document.createElement('p');
   feelsLike.innerText = weatherData.currentConditions.feelslike;
   feelsLikeContainer.appendChild(feelsLike);
 
   const minTemperatureContainer = document.querySelector(
-    '.min-temperature-container',
+    '.min-temperature-container'
   );
   const minTemp = document.createElement('p');
   minTemp.innerText = weatherData.weather.tempmin;
   minTemperatureContainer.appendChild(minTemp);
 
   const maxTemperatureContainer = document.querySelector(
-    '.max-temperature-container',
+    '.max-temperature-container'
   );
   const maxTemp = document.createElement('p');
   maxTemp.innerText = weatherData.weather.tempmax;
