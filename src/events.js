@@ -3,6 +3,7 @@ import render from './render';
 export default function events() {
   const search = () => {
     const searchButton = document.querySelector('.searchbar-submit-btn');
+    const searchInput = document.getElementById('header__searchbar');
     const form = document.querySelector('.search-form');
     searchButton.addEventListener('click', (event) => {
       event.preventDefault();
@@ -12,6 +13,7 @@ export default function events() {
       }
       const location = document.getElementById('header__searchbar').value;
       render(location);
+      searchInput.value = '';
     });
   };
   return { search };
