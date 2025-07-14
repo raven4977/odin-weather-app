@@ -16,7 +16,7 @@ export default async function render(location, unit) {
   }
   errorMsg.innerText = '';
   const locationNameContainer = document.querySelector(
-    '.location-name-container'
+    '.location-name-container',
   );
   locationNameContainer.innerHTML = '';
   const locationName = document.createElement('h2');
@@ -24,7 +24,7 @@ export default async function render(location, unit) {
   locationNameContainer.appendChild(locationName);
 
   const locationTimeContainer = document.querySelector(
-    '.location-time__heading'
+    '.location-time__heading',
   );
   locationTimeContainer.innerHTML = '';
   const locationTime = document.createElement('h2');
@@ -32,7 +32,7 @@ export default async function render(location, unit) {
   locationTimeContainer.appendChild(locationTime);
 
   const sunriseTimeContainer = document.querySelector(
-    '.sunrise-time-container'
+    '.sunrise-time-container',
   );
   sunriseTimeContainer.innerHTML = '';
   const sunriseTimeTitle = document.createElement('p');
@@ -51,7 +51,7 @@ export default async function render(location, unit) {
   sunsetTimeContainer.append(sunsetTimeTitle, sunsetTime);
 
   const currentTemperatureContainer = document.querySelector(
-    '.current-temperature-container'
+    '.current-temperature-container',
   );
   currentTemperatureContainer.innerHTML = '';
   const currentTempTitle = document.createElement('p');
@@ -61,7 +61,7 @@ export default async function render(location, unit) {
   currentTemperatureContainer.append(currentTempTitle, currentTemp);
 
   const feelsLikeContainer = document.querySelector(
-    '.feels-like-temperature-container'
+    '.feels-like-temperature-container',
   );
   feelsLikeContainer.innerHTML = '';
   const feelsLikeTitle = document.createElement('p');
@@ -71,7 +71,7 @@ export default async function render(location, unit) {
   feelsLikeContainer.append(feelsLikeTitle, feelsLike);
 
   const minTemperatureContainer = document.querySelector(
-    '.min-temperature-container'
+    '.min-temperature-container',
   );
   minTemperatureContainer.innerHTML = '';
   const minTemperatureTitle = document.createElement('p');
@@ -81,7 +81,7 @@ export default async function render(location, unit) {
   minTemperatureContainer.append(minTemperatureTitle, minTemp);
 
   const maxTemperatureContainer = document.querySelector(
-    '.max-temperature-container'
+    '.max-temperature-container',
   );
   maxTemperatureContainer.innerHTML = '';
   const maxTemperatureTitle = document.createElement('p');
