@@ -9,11 +9,12 @@ import fog from './images/fog.png';
 
 export default async function render(location, unit) {
   const weatherData = await getWeather(location, unit);
+  const errorMsg = document.querySelector('.error-msg');
   if (!weatherData) {
-    document.querySelector('.error-msg').innerText =
-      'Please insert a valid location';
+    errorMsg.innerText = 'Please insert a valid location';
     return;
   }
+  errorMsg.innerText = '';
   const locationNameContainer = document.querySelector(
     '.location-name-container'
   );
