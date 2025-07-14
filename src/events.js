@@ -12,9 +12,20 @@ export default function events() {
         return;
       }
       const location = document.getElementById('header__searchbar').value;
-      render(location);
+      const tempButton = document.querySelector('.btn--active');
+      const unit = tempButton.innerText === 'F' ? 'us' : 'metric';
+      render(location, unit);
       searchInput.value = '';
     });
   };
-  return { search };
+  const toggleTemp = () => {
+    const tempButton = document.querySelectorAll('.temp-btn');
+    tempButton.forEach((button) => {
+      button.addEventListener('click', () => {
+        tempButton.forEach((btn) => btn.classList.remove('btn--active'));
+        button.classList.add('btn--active');
+      });
+    });
+  };
+  return { search, toggleTemp };
 }
