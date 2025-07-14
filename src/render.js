@@ -12,6 +12,7 @@ export default async function render(location) {
   const locationNameContainer = document.querySelector(
     '.location-name-container'
   );
+  locationNameContainer.innerHTML = '';
   const locationName = document.createElement('h2');
   locationName.innerText = weatherData.location;
   locationNameContainer.appendChild(locationName);
@@ -19,6 +20,7 @@ export default async function render(location) {
   const locationTimeContainer = document.querySelector(
     '.location-time__heading'
   );
+  locationTimeContainer.innerHTML = '';
   const locationTime = document.createElement('h2');
   locationTime.innerText = weatherData.currentConditions.datetime;
   locationTimeContainer.appendChild(locationTime);
@@ -26,47 +28,69 @@ export default async function render(location) {
   const sunriseTimeContainer = document.querySelector(
     '.sunrise-time-container'
   );
+  sunriseTimeContainer.innerHTML = '';
+  const sunriseTimeTitle = document.createElement('p');
+  sunriseTimeTitle.innerText = 'Sunrise:';
   const sunriseTime = document.createElement('p');
   sunriseTime.innerText = weatherData.weather.sunrise;
-  sunriseTimeContainer.appendChild(sunriseTime);
+  sunriseTimeContainer.append(sunriseTimeTitle, sunriseTime);
 
   const sunsetTimeContainer = document.querySelector('.sunset-time-container');
+  sunsetTimeContainer.innerHTML = '';
+  const sunsetTimeTitle = document.createElement('p');
+  sunsetTimeTitle.innerText = 'Sunset:';
   const sunsetTime = document.createElement('p');
   sunsetTime.innerText = weatherData.weather.sunset;
-  sunsetTimeContainer.appendChild(sunsetTime);
+
+  sunsetTimeContainer.append(sunsetTimeTitle, sunsetTime);
 
   const currentTemperatureContainer = document.querySelector(
     '.current-temperature-container'
   );
+  currentTemperatureContainer.innerHTML = '';
+  const currentTempTitle = document.createElement('p');
+  currentTempTitle.innerText = 'Current Temperature:';
   const currentTemp = document.createElement('p');
   currentTemp.innerText = weatherData.weather.temp;
-  currentTemperatureContainer.appendChild(currentTemp);
+  currentTemperatureContainer.append(currentTempTitle, currentTemp);
 
   const feelsLikeContainer = document.querySelector(
     '.feels-like-temperature-container'
   );
+  feelsLikeContainer.innerHTML = '';
+  const feelsLikeTitle = document.createElement('p');
+  feelsLikeTitle.innerText = 'Feels Like:';
   const feelsLike = document.createElement('p');
   feelsLike.innerText = weatherData.currentConditions.feelslike;
-  feelsLikeContainer.appendChild(feelsLike);
+  feelsLikeContainer.append(feelsLikeTitle, feelsLike);
 
   const minTemperatureContainer = document.querySelector(
     '.min-temperature-container'
   );
+  minTemperatureContainer.innerHTML = '';
+  const minTemperatureTitle = document.createElement('p');
+  minTemperatureTitle.innerText = 'Minimum:';
   const minTemp = document.createElement('p');
   minTemp.innerText = weatherData.weather.tempmin;
-  minTemperatureContainer.appendChild(minTemp);
+  minTemperatureContainer.append(minTemperatureTitle, minTemp);
 
   const maxTemperatureContainer = document.querySelector(
     '.max-temperature-container'
   );
+  maxTemperatureContainer.innerHTML = '';
+  const maxTemperatureTitle = document.createElement('p');
+  maxTemperatureTitle.innerText = 'Maximum:';
   const maxTemp = document.createElement('p');
   maxTemp.innerText = weatherData.weather.tempmax;
-  maxTemperatureContainer.appendChild(maxTemp);
+  maxTemperatureContainer.append(maxTemperatureTitle, maxTemp);
 
   const windSpeedContainer = document.querySelector('.wind-container');
+  windSpeedContainer.innerHTML = '';
+  const windSpeedTitle = document.createElement('p');
+  windSpeedTitle.innerText = 'Wind Speed:';
   const windSpeed = document.createElement('p');
   windSpeed.innerText = weatherData.currentConditions.windspeed;
-  windSpeedContainer.appendChild(windSpeed);
+  windSpeedContainer.append(windSpeedTitle, windSpeed);
   const image = document.createElement('img');
   image.alt = 'Weather-icon';
   switch (weatherData.currentConditions.icon) {
@@ -96,5 +120,6 @@ export default async function render(location) {
       break;
   }
   const imageContainer = document.querySelector('.content__img-container');
+  imageContainer.innerHTML = '';
   imageContainer.appendChild(image);
 }
