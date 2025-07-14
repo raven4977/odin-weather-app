@@ -8,7 +8,8 @@ export default async function getWeather(location, unit) {
       throw new Error(`Response status: ${response.status}`);
     }
     const weatherData = await response.json();
-    if (weatherData.address === 'undefined') {
+    const resolved = weatherData.resolvedAddress;
+    if (!resolved || resolved === 'undefined') {
       return null;
     }
     return {
