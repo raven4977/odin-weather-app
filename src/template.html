@@ -10,23 +10,32 @@
       <div class="header__container">
         <h1 class="header__title">Odin Weather</h1>
         <nav class="header__nav">
-          <li>
+          <li class="form-list-item">
             <form class="search-form" action="#">
-              <label for="header__searchbar">Search location</label>
-              <input
-                type="text"
-                id="header__searchbar"
-                placeholder="Enter Location"
-                autocomplete="off"
-                required
-              />
-              <p class="error-msg"></p>
-              <button type="submit" class="searchbar-submit-btn">Submit</button>
+              <fieldset class="search-input-fieldset">
+                <legend>Please Insert A City Followed By Country:</legend>
+                <label for="header__searchbar" class="search-input-label"
+                  >Search location:</label
+                >
+                <input
+                  type="text"
+                  id="header__searchbar"
+                  placeholder="Example: London,UK"
+                  autocomplete="off"
+                  required
+                />
+                <button type="submit" class="searchbar-submit-btn">
+                  Submit
+                </button>
+              </fieldset>
+              <fieldset>
+                <p class="error-msg"></p>
+              </fieldset>
             </form>
           </li>
           <li>
-            <button class="fahrenheit-btn btn--active">F</button>
-            <button class="celsius-btn">C</button>
+            <button class="temp-btn btn--active">F</button>
+            <button class="temp-btn">C</button>
           </li>
         </nav>
       </div>

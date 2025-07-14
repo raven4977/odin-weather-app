@@ -108,19 +108,9 @@ legend {
   background: linear-gradient(to right, rgb(64, 215, 253), rgb(58, 70, 240));
 }
 
-.fahrenheit-btn {
-  margin-right: -5px;
-  border: 2px solid black;
-  border-right: 1px solid white;
-}
-
-.celsius-btn {
-  border: 2px solid black;
-  border-left: 1px solid white;
-}
-
-.fahrenheit-btn,
-.celsius-btn {
+.temp-btn {
+  margin-right: -8px;
+  border: 2px solid rgb(0, 0, 0);
   font-size: 1rem;
   padding: 5px 20px;
   background-color: transparent;
