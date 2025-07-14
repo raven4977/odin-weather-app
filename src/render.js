@@ -7,8 +7,8 @@ import partlyCloudyNight from './images/partly-cloudy-night.png';
 import snow from './images/snow.png';
 import fog from './images/fog.png';
 
-export default async function render(location) {
-  const weatherData = await getWeather(location);
+export default async function render(location, unit) {
+  const weatherData = await getWeather(location, unit);
   if (!weatherData) {
     document.querySelector('.error-msg').innerText =
       'Please insert a valid location';
