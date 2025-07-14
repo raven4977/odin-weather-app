@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Weather App</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__title">Odin Weather</h1>
+        <nav class="header__nav">
+          <li class="form-list-item">
+            <form class="search-form" action="#">
+              <fieldset class="search-input-fieldset">
+                <legend>Please Insert A City Followed By Country:</legend>
+                <label for="header__searchbar" class="search-input-label"
+                  >Search location:</label
+                >
+                <input
+                  type="text"
+                  id="header__searchbar"
+                  placeholder="Example: London,UK"
+                  autocomplete="off"
+                  required
+                />
+                <button type="submit" class="searchbar-submit-btn">
+                  Submit
+                </button>
+              </fieldset>
+              <fieldset>
+                <p class="error-msg"></p>
+              </fieldset>
+            </form>
+          </li>
+          <li>
+            <button class="temp-btn btn--active">F</button>
+            <button class="temp-btn">C</button>
+          </li>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <h2 class="wt-title">Today's Weather:</h2>
+      <div class="wt-container">
+        <div class="wt__header">
+          <div class="location-name-container">
+            <h2 class="location__heading">Location Name:</h2>
+          </div>
+          <div class="location-time__heading">
+            <h2 class="location__heading">Location time:</h2>
+          </div>
+        </div>
+        <div class="wt__body">
+          <div class="wt__body__content">
+            <div class="sunrise-time-container">
+              <p>Sunrise:</p>
+            </div>
+            <div class="sunset-time-container">
+              <p>Sunset:</p>
+            </div>
+          </div>
+          <div class="wt__body__content">
+            <div class="content__img-container"></div>
+            <div class="current-temperature-container">
+              <p>Current Temperature:</p>
+            </div>
+            <div class="feels-like-temperature-container">
+              <p>Feels Like:</p>
+            </div>
+          </div>
+          <div class="wt__body__content">
+            <div class="min-temperature-container">
+              <p>Minimum:</p>
+            </div>
+            <div class="max-temperature-container">
+              <p>Maximum:</p>
+            </div>
+            <div class="wind-container">
+              <p>Wind Speed:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
