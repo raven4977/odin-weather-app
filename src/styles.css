@@ -53,11 +53,10 @@ button {
 }
 
 .header__nav {
-  width: 100%;
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
 }
 
 .header__title {
@@ -67,13 +66,25 @@ button {
 
 .search-form {
   display: flex;
-  min-width: 500px;
-  max-width: 600px;
+  flex-direction: column;
 }
 
-.search-form label {
+fieldset {
+  border: none;
+}
+
+legend {
   color: white;
+  font-size: 1.15rem;
+}
+
+legend {
+  margin-bottom: 1em;
+}
+
+.search-input-label {
   width: 0px;
+  display: inline-block;
   overflow: hidden;
 }
 
@@ -82,8 +93,6 @@ button {
   padding: 8px 20px;
   font-size: 1rem;
   background-color: rgb(233, 231, 231);
-  min-width: 250px;
-  width: 100%;
   outline: none;
 }
 
