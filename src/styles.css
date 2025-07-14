@@ -73,7 +73,8 @@ fieldset {
   border: none;
 }
 
-legend {
+legend,
+.error-msg {
   color: white;
   font-size: 1.15rem;
 }
